@@ -1,0 +1,7 @@
+<Mod
+    name="Disable Friendly Fire (Reworked)"
+    description="Disables friendly fire caused by the majority of player spells.\n\nExceptions include:\n- Deadly Heal\n- Bloodlust\n- Piercing Shot\n\n There might be other exceptions since I did not test every single spell, please report any oddities.\n\nNote that you still take damage from environmental effects caused by your spells(fire, lightning, etc)."
+    tags="gameplay,quality of life,spells,perks,tweaks"
+    dont_upload_folders=".idea|.qodo"
+>
+</Mod>
