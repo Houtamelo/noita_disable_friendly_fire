@@ -7,7 +7,7 @@ function damage_about_to_be_received(damage, _x, _y, entity_thats_responsible, c
 		return damage, critical_hit_chance
 	end
 
-	local shooter = some_utils.get_projectile_root_shooter(entity_thats_responsible)
+	local shooter = some_utils.get_projectile_root_shooter(entity_thats_responsible, 0)
 
 	if shooter ~= nil then
 		if shooter == some_utils.forced_friendly_fire_dummy then
@@ -29,7 +29,7 @@ function shot(projectile)
 
 	-- Dont disable friendly fire on "Deadly Heal" projectile.
 	local is_heal_hurt = false
-	edit_all_components(projectile, "HitEffectComponent", function(hit_effect, vars)
+	edit_all_components(projectile, "HitEffectComponent", function(hit_effect, _vars)
 		local value_string = ComponentGetValue2(hit_effect, "value_string")
 		if value_string ~= nil and value_string == "data/entities/misc/effect_healhurt.xml" then
 			is_heal_hurt = true
